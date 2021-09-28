@@ -37,7 +37,18 @@ const data = {
 
 export default function ServiceSection() {
   return (
+   <div>
+      <h1>Service Section</h1>
     <h1>Service Section</h1>
+    <h1>Service Section</h1>
+    <h1>Service Section</h1>
+    <h1>Service Section</h1>
+    <h1>Service Section</h1>
+    <h1>Service Section</h1>
+    <h1>Service Section</h1>
+    <h1>Service Section</h1>
+
+   </div>
   );
 }
 

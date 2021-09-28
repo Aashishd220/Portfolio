@@ -61,13 +61,13 @@ export default function MobileDrawer() {
             ))}
       </Box>
 <Box sx={styles.menuFooter}>
-  <Box sx={ styles.social}>
+  {/* <Box sx={ styles.social}>
     {social.map((item,index)=>(
       <Box as="span" key={index} sx={styles.social.icon}>
         <Link to={item.path}>{item.icon}</Link>
         </Box>
     ))}
-  </Box>
+  </Box> */}
 
 </Box>
     </Box>

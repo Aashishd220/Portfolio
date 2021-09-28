@@ -1,57 +1,66 @@
 /** @jsx jsx */
 import { jsx, Container, Heading, Text, Box,Button, Image ,Card,Grid} from 'theme-ui';
 import SectionHeader from 'components/section-header';
-import ButtonGroup from 'components/button-group';
 
 import Project1 from 'assets/testimonial/Project1.png';
 import Avatar1 from 'assets/testimonial/avatar1.png';
 import Project2 from 'assets/testimonial/Project2.png';
-
-
-import Avatar2 from 'assets/testimonial/avatar2.png';
-import Avatar3 from 'assets/testimonial/avatar3.png';
-import Avatar4 from 'assets/testimonial/avatar4.png';
+import Project3 from 'assets/testimonial/Project3.png';
+import Project4 from 'assets/testimonial/Project4.png';
 
 const data = [
   {
     id: 1,
-    title: 'Blood Hunt',
+    title: 'Plasma Hunt',
     description:
-      'Developed a full stack application to allow the user to easily find a plasma nearby. Implemented redux for store management. Implemented OAuth authentication, Google maps to find the donor.     ',
+    'Built a social platform for sourcing plasma for COVID affected people by connecting them to recently recoveredCOVID patients in their vicinity. Designed and implemented the platform end-to-end.',
     avatar: Project1,
     link: 'https://plasmahunt.netlify.app/',
     designation: '@denny.hil',
     review: 4,
+    github:'https://github.com/Aashishd220/PlasmaHunt',
+    stack:['React', 'NodeJS', 'Express', 'MongoDB'],
   },
   {
     id: 2,
-    title: 'Design Quality & performance',
+    title: 'Memories App',
     description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
+      'Built a full-fledged social media platform where users can post content, comment and like posts. Implemented pagination to reduce client side load thereby increasing the speed of the application by 20 percent.',
     avatar: Project2,
-    link: 'https://netflix-clone-f13ea.web.app/',
+    link: 'https://memories-collector.netlify.app/posts',
     designation: '@denny.hil',
     review: 5,
+    github:'https://github.com/Aashishd220/Memories_App',
+    stack:['React', 'NodeJS', 'Express', 'MongoDB'],
+
   },
   {
     id: 3,
-    title: 'Layout and organized layers',
+    title: 'Covid-19 Tracker',
     description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-    avatar: Avatar3,
+      'Engineered a COVID-19 tracking dashboard with world-wide real-time data and graphs. User can easily switch between countries to fetch data.  Google maps and Graphs are implemented to display information.',
+    avatar: Project3,
+    link: 'https://covid-19-statstracker.netlify.app/',
     name: 'Denny Hilguston',
     designation: '@denny.hil',
     review: 5,
+    github:'https://github.com/Aashishd220/Covid_Tracker',
+    stack:['React', 'Disease.sh API'],
+
   },
   {
     id: 4,
-    title: 'Modern look & trending design',
+    title: 'Travel Easy',
     description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-    avatar: Avatar4,
+      'Built a travel and discovery website that helps in finding hotels, restaurants and nearby attractions in a new city.•The website communicates with RAPID API on the back-end to handle searches. Built a responsive, declarative front-end in React.js that communicates seamlessly with the API.',
+    avatar: Project4,
+    link: 'https://maketraveleasy.netlify.app/',
     name: 'Denny Hilguston',
     designation: '@denny.hil',
     review: 4,
+    github:'https://github.com/Aashishd220/Travel-Advisor',
+    stack:['React', 'Rapid API'],
+    
   },
 ];
 
@@ -113,10 +122,14 @@ export default function TestimonialCard() {
                Stack
               </Heading>
               <div style={{display:'flex', justifyContent:'space-between'}}>
-              <Text color="primary" as="h4" >React</Text>
+               { item.stack.map((s)=>(
+              <Text color="primary" as="h4" >{s}</Text>
+
+                ))}
+              {/* <Text color="primary" as="h4" >React</Text>
               <Text color="primary" as="h4" >Node</Text>
               <Text color="primary" as="h4" >Express</Text>
-              <Text color="primary" as="h4" >Mongo</Text>
+              <Text color="primary" as="h4" >Mongo</Text> */}
               </div>
 
               </Box>
@@ -127,9 +140,12 @@ export default function TestimonialCard() {
                 Live
               </Button>
               </a>
+              <a href={item.github} target="_blank">
+              
               <Button variant="primary" backgroundColor="#2196f3" aria-label={item.name}>
                Source
               </Button>
+              </a>
               </div>
               
             </Box>

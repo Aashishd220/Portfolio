@@ -18,7 +18,7 @@ export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
         <Layout>
-          <SEO title="NextJS Landing Page" />
+          <SEO title="Aashish Dhalla" />
           <Banner />
           <KeyFeature />
           {/* <ServiceSection /> */}
@@ -30,6 +30,8 @@ export default function IndexPage() {
           <TeamSection />
 
         </Layout>
+          {/* <ServiceSection /> */}
+        
     </ThemeProvider>
   );
 }

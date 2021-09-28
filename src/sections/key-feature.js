@@ -18,7 +18,7 @@ export default function KeyFeature() {
         <SectionHeader slogan="Skills" title="Check out some of my skills" />
       </Container>
       <Container css={{ textAlign: "center" }}>
-        <Card sx={styles.cards.primary}>
+        <Card sx={styles.cards.primary} style={{padding: "32px"}}>
           <Box>
             <Heading
               variant="title"

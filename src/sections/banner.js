@@ -1,9 +1,11 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { Container, Box, Heading, Text, Image, Button } from 'theme-ui';
-import BannerImg from 'assets/banner-thumb1.png';
+import BannerImg from 'assets/banner-thumb.png';
 import ShapeLeft from 'assets/shape-left.png';
 import ShapeRight from 'assets/shape-right.png';
+import test from 'assets/blog/1.jpg';
+
 
 export default function Banner() {
   return (
@@ -14,10 +16,12 @@ export default function Banner() {
             I'm Aashish Dhalla.
         </Heading>
         <Text as="p" variant="heroSecondary">
-        I'm a  ReactJS and NodeJS Developer. I'm currently pursuing my master's in Computer Science at the University of Florida.
+        I'm a  ReactJS and NodeJS Developer. I'm currently pursuing master's in Computer Science at the University of Florida.
 
         </Text>
+        <a href="https://raw.githubusercontent.com/Aashishd220/Resume_Aashish/main/Resume_Aashish.pdf" target="_blank">
         <Button variant="primary">Download CV</Button>
+        </a>
        </Box>
       <Box sx={styles.banner.imageBox}>
         <Image src={BannerImg} alt="banner"/>

@@ -3,8 +3,10 @@ import { jsx, Box, Container, Image, Text } from 'theme-ui';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import FooterLogo from 'assets/logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faGithub,faLinkedin,faGoogle, } from "@fortawesome/free-brands-svg-icons"
+import SectionHeader from '../../components/section-header';
+
 import Link from 'next/link'
 library.add(
   faGithub,
@@ -17,25 +19,26 @@ export default function Footer() {
 
   return (
    <footer id="contact" sx={styles.footer}>
-     <Container>
+     <Container >
+
      <Box sx={styles.footer.footerBottomArea}>
-    
+      <SectionHeader slogan="Contact Me" title="Connect with me " />
 
        <Box sx={styles.footer.menus}>
        <nav>
     <Link  href="https://github.com/Aashishd220/">
           <FontAwesomeIcon icon={faGithub} size="3x" />
           </Link>
-          <Link href="https://www.linkedin.com/in/aashish-dhalla-1a3863168/">
+          <Link href="https://www.linkedin.com/in/aashish-dhalla/">
           <FontAwesomeIcon icon={faLinkedin} size="3x" style={{color:'blue',marginLeft:'44px'}} />
           </Link>
             
-          <FontAwesomeIcon icon={faEnvelope} size="3x" style={{color:'red',marginLeft:'44px'}} />
+          {/* <FontAwesomeIcon icon={faPhone} size="3x" style={{color:'red',marginLeft:'44px'}} /> */}
        </nav>
        </Box>
        </Box>
        <Box sx={styles.footer.bottom}>
-       <Text as="h4">Created by Aashish Dhalla © 2021</Text>
+       <Text  as="h4">Created by Aashish Dhalla © 2021</Text>
        </Box>
      </Container>
      </footer>
@@ -52,6 +55,7 @@ const styles = {
       pb: ['30px', null, '50px'],
       textAlign: 'center',
       flexDirection: 'column',
+      
     },
     bottom:{
       display: 'flex',
@@ -87,5 +91,6 @@ const styles = {
       fontSize: [1, '15px'],
       width: '100%',
     },
+    
   },
 };
